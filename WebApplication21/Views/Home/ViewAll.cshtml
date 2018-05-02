@@ -1,0 +1,16 @@
+﻿@model System.Collections.Generic.IEnumerable<WebApplication21.Controllers.UploadedImage>
+
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        @foreach (var image in Model)
+        {
+            <div class="well" style="padding: 20px; text-align: center;">
+                <a href="/home/viewsingle?imageid=@image.Id">
+                    <h4>@image.Text</h4>
+                    <img src="/UploadedImages/@image.FileName" style="width: 300px;" />
+                </a>
+            </div>
+        }
+    </div>
+</div>
